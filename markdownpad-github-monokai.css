@@ -296,33 +296,38 @@ img {
 =============================================================================*/
 
 .task-list-item-checkbox {
+  list-style-type: none;
+  display: inline-block;
+  margin-left: -20px;
+  margin-right: 3px;
+  vertical-align: 1px;
+  margin-top: 0px;
+
   appearance: none;
-  width: 18px;
-  height: 18px;
-  border: 2px solid #2196f3;    /* 藍色外框 */
+  -webkit-appearance: none;   /* 讓自訂顏色生效 */
+  width: 16px;
+  height: 16px;
+  border: 2px solid #2196f3;  /* 藍色外框 */
   border-radius: 4px;
-  background-color: #f0f8ff;    /* 淡藍底 */
+  background-color: #f0f8ff;  /* 淡藍底 */
   cursor: pointer;
-  transition: all 0.2s ease;
-  vertical-align: middle;
-  position: relative;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .task-list-item-checkbox:hover {
-  background-color: #e3f2fd;    /* 滑過時亮一點 */
+  background-color: #e3f2fd;  /* 滑過時亮一點 */
 }
 
 .task-list-item-checkbox:checked {
-  background-color: #2196f3;    /* 打勾時藍底 */
+  background-color: #2196f3;  /* 打勾時藍底 */
   border-color: #2196f3;
 }
 
 .task-list-item-checkbox:checked::after {
   content: "✔";
   color: white;
-  font-size: 14px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -55%);  /* 垂直微調使居中 */
+  font-size: 12px;
+  position: relative;
+  top: -2px;                 /* 微調垂直置中 */
+  left: 2px;                 /* 微調水平位置 */
 }
