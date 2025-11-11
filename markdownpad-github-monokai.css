@@ -291,3 +291,38 @@ table tr:nth-child(2n) {
 img {
   max-width: 100%;
 }
+
+/* CheckBox
+=============================================================================*/
+
+.task-list-item-checkbox {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #2196f3;    /* 藍色外框 */
+  border-radius: 4px;
+  background-color: #f0f8ff;    /* 淡藍底 */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  vertical-align: middle;
+  position: relative;
+}
+
+.task-list-item-checkbox:hover {
+  background-color: #e3f2fd;    /* 滑過時亮一點 */
+}
+
+.task-list-item-checkbox:checked {
+  background-color: #2196f3;    /* 打勾時藍底 */
+  border-color: #2196f3;
+}
+
+.task-list-item-checkbox:checked::after {
+  content: "✔";
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);  /* 垂直微調使居中 */
+}
